@@ -30,8 +30,9 @@ jobs:
         run: |
           mkdir -p app/src/main/java/com/boss/ai
           mkdir -p app/src/main/assets
+          mkdir -p app/src/main/res/values
 
-          cat > settings.gradle <<'EOF
+          cat > settings.gradle <<'EOF'
           pluginManagement {
               repositories {
                   google()
@@ -41,7 +42,6 @@ jobs:
           }
 
           dependencyResolutionManagement {
-              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
               repositories {
                   google()
                   mavenCentral()
@@ -104,8 +104,6 @@ jobs:
               </application>
           </manifest>
           EOF
-
-          mkdir -p app/src/main/res/values
 
           cat > app/src/main/res/values/styles.xml <<'EOF'
           <resources>
