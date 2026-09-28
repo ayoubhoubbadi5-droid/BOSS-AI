@@ -31,7 +31,7 @@ jobs:
           mkdir -p app/src/main/java/com/boss/ai
           mkdir -p app/src/main/assets
 
-          cat > settings.gradle <<'EOF'
+          cat > settings.gradle <<'EOF
           pluginManagement {
               repositories {
                   google()
